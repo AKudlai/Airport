@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Airport.Servises;
+using Airport.Models;
 
-namespace Airport.Models
+namespace Airport.View
 {
     public class ConsoleInput
     {

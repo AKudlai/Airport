@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Airport.DAL")]
+[assembly: AssemblyTitle("Airport.View")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Airport.DAL")]
+[assembly: AssemblyProduct("Airport.View")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("abedadb9-471f-4c41-adc5-daeec4769b2b")]
+[assembly: Guid("f4496198-84ef-4b36-8c8f-005f68f25e50")]
 
 // Version information for an assembly consists of the following four values:
 //

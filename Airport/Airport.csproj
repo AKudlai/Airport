@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ABEDADB9-471F-4C41-ADC5-DAEEC4769B2B}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Airport.DAL</RootNamespace>
-    <AssemblyName>Airport.DAL</AssemblyName>
+    <ProjectGuid>{145A5475-76F5-4C56-8C17-6BF763750B83}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Airport</RootNamespace>
+    <AssemblyName>Airport</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,10 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlightsXML.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Airport.DAL\Airport.DAL.csproj">
+      <Project>{abedadb9-471f-4c41-adc5-daeec4769b2b}</Project>
+      <Name>Airport.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Airport.Models\Airport.Models.csproj">
       <Project>{4be47e50-7104-4868-af1e-9a601fb6e08a}</Project>
       <Name>Airport.Models</Name>
@@ -52,6 +61,13 @@
       <Project>{183728fb-a1f8-4b0c-a6e2-145cb4e82dc8}</Project>
       <Name>Airport.Servises</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Airport.View\Airport.View.csproj">
+      <Project>{f4496198-84ef-4b36-8c8f-005f68f25e50}</Project>
+      <Name>Airport.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

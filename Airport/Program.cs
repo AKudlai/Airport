@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Airport.DAL;
+using Airport.View;
 
-namespace Airport.Models
+
+namespace Airport
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Panel.FillPanelList();
+            FlightsXml.FillPanelList();
             Console.WindowWidth = 150;
             for (;;)
             {
