@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Airport.Models;
 
 namespace Airport.Servises
@@ -9,7 +10,8 @@ namespace Airport.Servises
         public static List<Flight> PanelList = new List<Flight>();     
         public static List<Flight> FindFlightNumber (string findString, List<Flight> panelList)
         {
-            List<Flight> results = panelList.FindAll(flight => flight.FlightNumber == findString);
+            List<Flight> results = panelList.FindAll(flight => flight.FlightNumberId == findString);
+            panelList.AsQueryable().Where(e => e.Airline == "s");
             return FlightNotFound(results);
         }
 
@@ -30,13 +32,13 @@ namespace Airport.Servises
         }
         public static List<Flight> FindFlightType(FlightType flyType)
         {
-            List<Flight> results = PanelList.FindAll(flight => flight.FType == flyType);
+            List<Flight> results = PanelList.FindAll(flight => flight.FlightType == flyType);
             PanelList = results;
             return FlightNotFound(results);
         }
         public static void DeleteFlights(string findString, List<Flight> paneList )
         {
-            paneList.RemoveAll(flight => flight.FlightNumber == findString);
+            paneList.RemoveAll(flight => flight.FlightNumberId == findString);
         }
         private static List<Flight> FlightNotFound(List<Flight> results)
         {

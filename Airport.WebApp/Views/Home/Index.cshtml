@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="flight" content="width=device-width"/>
+    <title>Панель рейсов</title>
+</head>
+<body>
+<div>
+    <h2>Панель прибытия</h2>
+    @using (Html.BeginForm(""))
+    {
+        
+    }
+    <table>
+        <tr>
+            <td>Номер рейса</td>
+            <td>Город</td>
+        </tr>
+        @foreach (var f in ViewBag.Flights)
+        {
+            <tr>
+                <td>@f.FlightNumberId</td>
+                <td>@f.Port</td>
+            </tr>
+        }
+    </table>
+    <a href="Home/AddFlight.cshtml">Добавить новый рейс</a>
+</div>
+</body>
+</html>

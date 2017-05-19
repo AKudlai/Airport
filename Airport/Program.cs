@@ -9,7 +9,6 @@ namespace Airport
     {
         static void Main(string[] args)
         {
-            FlightsXml.FillPanelList();
             Console.WindowWidth = 150;
             for (;;)
             {
