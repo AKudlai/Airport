@@ -49,6 +49,29 @@
   <ItemGroup>
     <Compile Include="AirportContext.cs" />
     <Compile Include="AirportDbInitializer.cs" />
+    <Compile Include="Mapping\AircraftMap.cs" />
+    <Compile Include="Mapping\FlightMap.cs" />
+    <Compile Include="Mapping\FlightStatusMap.cs" />
+    <Compile Include="Mapping\PersonMap.cs" />
+    <Compile Include="Mapping\PriceMap.cs" />
+    <Compile Include="Mapping\TicketMap.cs" />
+    <Compile Include="Migrations\201707041809228_Initial.cs" />
+    <Compile Include="Migrations\201707041809228_Initial.Designer.cs">
+      <DependentUpon>201707041809228_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707041816086_Fix1.cs" />
+    <Compile Include="Migrations\201707041816086_Fix1.Designer.cs">
+      <DependentUpon>201707041816086_Fix1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707041826361_Fix2.cs" />
+    <Compile Include="Migrations\201707041826361_Fix2.Designer.cs">
+      <DependentUpon>201707041826361_Fix2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707051401085_Delete photos in models.cs" />
+    <Compile Include="Migrations\201707051401085_Delete photos in models.Designer.cs">
+      <DependentUpon>201707051401085_Delete photos in models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,16 +79,26 @@
       <Project>{4be47e50-7104-4868-af1e-9a601fb6e08a}</Project>
       <Name>Airport.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Airport.Servises\Airport.Servises.csproj">
-      <Project>{183728fb-a1f8-4b0c-a6e2-145cb4e82dc8}</Project>
-      <Name>Airport.Servises</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707041809228_Initial.resx">
+      <DependentUpon>201707041809228_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707041816086_Fix1.resx">
+      <DependentUpon>201707041816086_Fix1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707041826361_Fix2.resx">
+      <DependentUpon>201707041826361_Fix2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707051401085_Delete photos in models.resx">
+      <DependentUpon>201707051401085_Delete photos in models.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
