@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-
-using Airport.Contracts;
-using System.Data.Entity;
-
-namespace Airport.Services.Repositories
+﻿namespace Airport.Services.Repositories
 {
-    public class GenericRepository<T> : IGenericRpository<T> where T: class
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Linq.Expressions;
+
+    using Airport.Contracts;
+
+    public class GenericRepository<T> : IGenericRpository<T> where T : class
     {
         private readonly DbContext context;
         private readonly DbSet<T> set;

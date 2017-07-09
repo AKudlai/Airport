@@ -189,9 +189,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FlightPanelController.cs" />
+    <Compile Include="Controllers\AircraftController.cs" />
+    <Compile Include="Controllers\FlightsController.cs" />
+    <Compile Include="Controllers\FlightStatusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\PortsController.cs" />
+    <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,15 +263,49 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\FlightPanel\Index.cshtml" />
-    <Content Include="Views\FlightPanel\Create.cshtml" />
-    <Content Include="Views\FlightPanel\Edit.cshtml" />
-    <Content Include="Views\FlightPanel\Delete.cshtml" />
-    <Content Include="Views\FlightPanel\Details.cshtml" />
+    <Content Include="Views\Aircraft\Create.cshtml" />
+    <Content Include="Views\Aircraft\Delete.cshtml" />
+    <Content Include="Views\Aircraft\Details.cshtml" />
+    <Content Include="Views\Aircraft\Edit.cshtml" />
+    <Content Include="Views\Aircraft\Index.cshtml" />
+    <Content Include="Views\Airlines\Create.cshtml" />
+    <Content Include="Views\Airlines\Delete.cshtml" />
+    <Content Include="Views\Airlines\Details.cshtml" />
+    <Content Include="Views\Airlines\Edit.cshtml" />
+    <Content Include="Views\Airlines\Index.cshtml" />
+    <Content Include="Views\Ports\Create.cshtml" />
+    <Content Include="Views\Ports\Delete.cshtml" />
+    <Content Include="Views\Ports\Details.cshtml" />
+    <Content Include="Views\Ports\Edit.cshtml" />
+    <Content Include="Views\Ports\Index.cshtml" />
+    <Content Include="Views\FlightStatus\Create.cshtml" />
+    <Content Include="Views\FlightStatus\Delete.cshtml" />
+    <Content Include="Views\FlightStatus\Details.cshtml" />
+    <Content Include="Views\FlightStatus\Edit.cshtml" />
+    <Content Include="Views\FlightStatus\Index.cshtml" />
+    <Content Include="Views\People\Create.cshtml" />
+    <Content Include="Views\People\Delete.cshtml" />
+    <Content Include="Views\People\Details.cshtml" />
+    <Content Include="Views\People\Edit.cshtml" />
+    <Content Include="Views\People\Index.cshtml" />
+    <Content Include="Views\Tickets\Create.cshtml" />
+    <Content Include="Views\Tickets\Delete.cshtml" />
+    <Content Include="Views\Tickets\Details.cshtml" />
+    <Content Include="Views\Tickets\Edit.cshtml" />
+    <Content Include="Views\Tickets\Index.cshtml" />
+    <Content Include="Views\Prices\Create.cshtml" />
+    <Content Include="Views\Prices\Delete.cshtml" />
+    <Content Include="Views\Prices\Details.cshtml" />
+    <Content Include="Views\Prices\Edit.cshtml" />
+    <Content Include="Views\Prices\Index.cshtml" />
+    <Content Include="Views\Flights\Create.cshtml" />
+    <Content Include="Views\Flights\Delete.cshtml" />
+    <Content Include="Views\Flights\Details.cshtml" />
+    <Content Include="Views\Flights\Edit.cshtml" />
+    <Content Include="Views\Flights\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AirportPanel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,0 +1,74 @@
+﻿@model Airport.Models.ViewModels.FlightPanelView
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().FlightNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().FlightType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().FlightDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().Port)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().Terminal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().Gate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().Airline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flights.First().FlightStatus.Name)
+        </th>
+    </tr>
+
+@foreach (var item in Model.Flights) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlightNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlightType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlightDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Port.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Terminal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Airline.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlightStatus.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FlightNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FlightNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FlightNumber })
+        </td>
+    </tr>
+}
+
+</table>

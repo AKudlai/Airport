@@ -21,17 +21,17 @@
                         Airline =
                             new Airline
                                 {
-                                    AirlineId = Guid.NewGuid(),
+                                    Id = Guid.NewGuid(),
                                     Name = "MAU",
                                     Aircrafts =
                                         new List<Aircraft>
                                             {
                                                 new Aircraft
                                                     {
-                                                        AircraftId = Guid.NewGuid(),
-                                                        BusinessClassSit = 5,
-                                                        EconomyClassSit = 20,
-                                                        FirstClassSit = 3,
+                                                        Id = Guid.NewGuid(),
+                                                        BusinessClassSitCount = 5,
+                                                        EconomyClassSitCount = 20,
+                                                        FirstClassSitCount = 3,
                                                         Model = "AD"
                                                     }
                                             }
@@ -70,7 +70,6 @@
                                                     },
                                             CabinClass = CabinClass.Business,
                                             SitNumber = "C1",
-                                            Price = new Price { Id = Guid.NewGuid(), Value = 300 }
                                         }
                                     
                                 }

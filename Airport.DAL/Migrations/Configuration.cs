@@ -5,14 +5,14 @@ namespace Airport.DAL.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AirportContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Airport.DAL.AirportContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AirportContext context)
+        protected override void Seed(Airport.DAL.AirportContext context)
         {
             //  This method will be called after migrating to the latest version.
 

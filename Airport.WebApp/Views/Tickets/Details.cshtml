@@ -1,0 +1,42 @@
+﻿@model Airport.Models.DomainModels.Entities.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ticket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CabinClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CabinClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SitNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SitNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TicketNumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

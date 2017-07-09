@@ -1,22 +1,28 @@
 ﻿namespace Airport.Models.DomainModels.Entities
 {
     using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Aircraft
     {
-        public Guid AircraftId { get; set; }
+        public Guid Id { get; set; }
 
         public string Model { get; set; }
 
-        //public byte[] Photo { get; set; }
+        public byte[] Photo { get; set; }
 
-        //public byte[] SitsPlan { get; set; }
+        [Display(Name = "Sits plan")]
+        public byte[] SitsPlan { get; set; }
 
-        public int FirstClassSit { get; set; }
+        [Display(Name = "First class sits")]
+        public int FirstClassSitCount { get; set; }
 
-        public int BusinessClassSit { get; set; }
+        [Display(Name = "Business class sits")]
+        public int BusinessClassSitCount { get; set; }
 
-        public int EconomyClassSit { get; set; }
+        [Display(Name = "Economy class sits")]
+        public int EconomyClassSitCount { get; set; }
 
         public Guid AirlineId { get; set; }
 

@@ -1,0 +1,72 @@
+﻿@model Airport.Models.DomainModels.Entities.Aircraft
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Aircraft</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SitsPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SitsPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstClassSitCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstClassSitCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessClassSitCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessClassSitCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EconomyClassSitCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EconomyClassSitCount)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

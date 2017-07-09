@@ -8,10 +8,12 @@
 
     public class Flight
     {
+        [Display(Name = "Flight nuber")]
         public string FlightNumber { get; set; }
 
         public FlightType FlightType { get; set; }
 
+        [Display(Name = "Date")]
         public DateTime FlightDate { get; set; }
 
         public virtual Port Port { get; set; }
@@ -22,9 +24,9 @@
 
         public Gate Gate { get; set; }
 
-        public virtual Airline Airline { get; set; }
+        public virtual Aircraft Aircraft { get; set; }
 
-        public Guid AirlineId { get; set; }
+        public Guid AircraftId { get; set; }
 
         public virtual ICollection<Ticket> Tickets { get; set; }
 

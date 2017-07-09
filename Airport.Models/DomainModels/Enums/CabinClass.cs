@@ -2,6 +2,7 @@
 {
     public enum CabinClass
     {
+        First,
         Business,
         Economy
     }

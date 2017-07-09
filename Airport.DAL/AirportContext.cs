@@ -15,16 +15,16 @@
 
         public AirportContext()
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = true;
         }
 
         public DbSet<Flight> Flights { get; set; }
 
+        public DbSet<FlightStatus> FlightStatuses { get; set; }
+
         public DbSet<Ticket> Tickets { get; set; }
 
         public DbSet<Person> Persons { get; set; }
-
-        public DbSet<Price> Prices { get; set; }
 
         public DbSet<Aircraft> Aircrafts { get; set; }
 
@@ -35,10 +35,7 @@
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new FlightMap());
-            modelBuilder.Configurations.Add(new AircraftMap());
-            modelBuilder.Configurations.Add(new FlightStatusMap());
             modelBuilder.Configurations.Add(new TicketMap());
-            modelBuilder.Configurations.Add(new PriceMap());
         }
     }
 }
